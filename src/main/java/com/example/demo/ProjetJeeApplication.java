@@ -3,8 +3,10 @@ package com.example.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
+import com.example.demo.configuration.JpaConfiguration;
 
-@SpringBootApplication
+@Import(JpaConfiguration.class)
+@SpringBootApplication(scanBasePackages={"com.example.demo"})
 public class ProjetJeeApplication {
 
 	public static void main(String[] args) {
